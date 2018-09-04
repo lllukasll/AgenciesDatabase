@@ -1,0 +1,21 @@
+.navbar {
+    height: 40px;
+}
+
+.navbar-logo {
+    color: #0066cc;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.navbar-search-container {
+    margin-left: 30%;
+    padding-top: 5%;
+    width: 150%;
+    height: 80%;
+}
+
+.navbar-search {
+    border-color: black;
+    height: 100%;
+}

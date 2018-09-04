@@ -1,3 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 /* You can add global styles to this file, and also import other style files */
+html* { font-family: 'Imago Bold', 'Imago Regular', 'Imago' };
+
+body {
+    font-family: 'Imago Bold', 'Imago Regular', 'Imago';
+    font-size: 14px;
+    line-height: 1.3;
+    color: #666666;
+    background-color: #f3f3f4;
+}
+ 
+h1, h2 {
+    color: #0066cc;
+    font-style: italic;
+    font-weight: bold;
+}
+.table{
+    margin-bottom: 0;
+}
+ 
+.table .thead-blue th {
+    white-space:nowrap;
+    background-color: #0066cc;
+    color: white;
+    vertical-align: middle;
+}
+ 
+.table-responsive{
+    margin-bottom: 15px;
+}
+ 
+.clickable{
+    cursor: pointer;
+}
+ 
+.fa-sort {
+    opacity: 0.5;
+}
+ 
+.red-star {
+    color: red;
+}
+ 
+.pagination-input {
+    height:35px !important;
+}
+.scrollbox {
+    overflow: auto;
+    background-image:
+    
+    /* Shadows */
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, white, white),
+    /* Shadow covers */ 
+    linear-gradient(to right, rgba(0,0,0,.25), rgba(255,255,255,0)),
+    linear-gradient(to left, rgba(0,0,0,.25), rgba(255,255,255,0));
+    
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+    
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+}
