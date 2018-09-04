@@ -2,7 +2,12 @@
     color: #0066cc;
     font-style: italic;
     margin: 10px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.question-text {
+    font-weight: 400;
 }
 
 .card-group {
