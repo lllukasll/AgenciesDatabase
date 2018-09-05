@@ -9,13 +9,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AgencyListComponent } from './components/agency-list/agency-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StarComponent } from './components/common/star/star.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MainPageComponent,
-    AgencyListComponent
+    AgencyListComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

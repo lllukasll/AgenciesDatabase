@@ -59,7 +59,22 @@
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
-    align-items: center
+    align-items: center;
+    width: 100%;
+    
+}
+
+.filter-category-title-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.filters-category-icon {
+    position: absolute;
+    font-size: 2rem;
+    right: 5px;
+    cursor: pointer;
 }
 
 .filters-category ul {
@@ -165,7 +180,7 @@
     color: blue;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .example-sidenav {
         width: 100%;
       }

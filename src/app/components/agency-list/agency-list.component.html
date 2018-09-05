@@ -9,10 +9,20 @@
       </span>
     </span>
     <span class="col-6">
-      Displaying 315 results for: Photography
+      Displaying 
+      {{results}} 
+      {{selectedCategories.length === 1 ? 'result' : 'results'}}
+      {{selectedCategories.length > 0 ? 'for: ' : ''}} 
+      <span *ngFor='let category of selectedCategories'><span class="agency-capability" [style.background-color]='colors[category.id - 1]'>{{category.name}}</span> </span>
     </span>
     <span class="col-3 text-right">
-      Sort by: Highest grades
+        Sort by: 
+        <mat-form-field >
+            <mat-select value="1" >
+              <mat-option value="1" (click)='sortByHighestGrades()'>Highest grades</mat-option>
+              <mat-option value="2" (click)='sortByLowestGrades()'>Lowest grades</mat-option>
+            </mat-select>
+          </mat-form-field>
     </span>
   </div>
 
@@ -31,11 +41,13 @@
                  [fixedBottomGap]="10">
       <div>
         <div class="filters-category">
-          Category:
-          <i class="material-icons" (click)="toggle()">keyboard_arrow_up</i>
+          <div class="filter-category-title-container">
+            Category:
+            <i class="material-icons filters-category-icon" (click)="toggle()">{{listCollapsed ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</i>
+          </div>
           <ul #listaDoZwiniecia style="overflow: hidden;">
-            <li *ngFor='let category of categoryList'><mat-checkbox (click)='onCategoryChange(category)'>{{category.name}}</mat-checkbox></li>
-            <li class="show-more-button">Show more</li>
+            <li *ngFor='let category of shownCategories'><mat-checkbox (click)='onCategoryChange(category)'>{{category.name}}</mat-checkbox></li>
+            <li class="show-more-button" (click)='changeShowMoreCategoriesState()'>{{showingAllCategories ? 'Show more' : 'Hide'}}</li>
           </ul>
         </div>
         <div class="">
@@ -54,10 +66,10 @@
 
     <mat-sidenav-content style="min-height: 800px;">
       <div class="row content" *ngFor='let agency of getFilteredList()'>
-        <div class="col-md-2 agency-logo-container">
+        <div class="col-lg-2 col-md-2 agency-logo-container">
           <img [src]='agency.logoUrl' alt="logo" class="img-fluid agency-logo" />
         </div>
-        <div class="col-md-8" >
+        <div class="col-lg-8 col-md-7" >
           <div class="agency-title-row">
             <div>
               <h5 class="agency-name">{{agency.name}}</h5>
@@ -74,19 +86,14 @@
           </div>
           <div class="agency-capabilities-container">
             <span class="agency-capability-title">Top capabilities:</span>
-            <span class="agency-capability" style="background-color: red">Photography</span>
-            <span class="agency-capability" style="background-color: green">Animations</span> 
-            <span class="agency-capability" style="background-color: blue">Movies</span></div>
-        </div>
-        <div class="col-md-2 agency-rating">
-          <div class="agency-rating-stars">
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
+            <span class="agency-capability"  [style.background-color]='colors[category.id - 1]' *ngFor='let category of agency.categories'>{{category.name}}</span>
           </div>
-          <div class="agency-rating-title">Perfect</div>
+        </div>
+        <div class="col-lg-2 col-md-3 agency-rating">
+          <div class="agency-rating-stars">
+            <app-star [rating]='agency.rating'></app-star>
+          </div>
+          <div class="agency-rating-title">{{ratingMessage[agency.rating - 1].name}}</div>
           <div class="agency-rating-reviews">{{agency.reviews}} reviews</div>
           <div class="agency-rating-show-more-btn">SHOW MORE</div>
         </div>
