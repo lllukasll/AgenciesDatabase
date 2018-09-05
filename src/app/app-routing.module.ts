@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { AgencyListComponent } from './components/agency-list/agency-list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: MainPageComponent
+  },
+  {
+    path: 'list',
+    component: AgencyListComponent
   }
 ]
 

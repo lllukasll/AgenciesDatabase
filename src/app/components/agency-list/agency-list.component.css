@@ -1,0 +1,248 @@
+.header {
+    align-items: center;
+}
+
+.example-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.example-sidenav {
+    display: flex;
+    width: 200px;
+    background: #0066cc;
+    max-height: 500px;
+    overflow: auto;
+    padding: 10px;
+    color: white;
+    z-index: 5;
+  }
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border-color: white !important;
+    border-width: 1px;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+    background-color: #0066cc !important; /* Red background for example */
+    border-color: white !important;
+}
+
+.filters-button {
+    width: 200px !important;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #0066cc;
+    cursor: pointer;
+}
+
+.filters-menu-icon {
+    font-size: 2.2rem;
+    margin-right: 10px;
+}
+
+.filters-hide-icon {
+    font-size: 3rem;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
+
+.filters-category {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    align-items: center
+}
+
+.filters-category ul {
+    margin: 10px 10px 0px 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.filters-category li {
+    /* margin-top: -10px; */
+    padding: 0;
+}
+
+.show-more-button {
+    text-decoration: underline;
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.content {
+    margin: 10px;
+    min-height: 200px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.agency-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.agency-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.agency-title-row {
+    margin: 10px;
+}
+
+.agency-name {
+    display: inline-block;
+}
+
+.agency-localization {
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.agency-add-to-favourite {
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.agency-content {
+    overflow: auto;
+    height: 100px;
+}
+
+.agency-capabilities-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.agency-capability {
+    color: white;
+    font-weight: 500;
+    padding: 2px 10px;
+    margin: 0px 5px;
+    border-radius: 5px;
+}
+
+.agency-rating {
+    position: relative;
+}
+
+.agency-rating-stars {
+    color: gold;
+    margin: 10px 0px;
+    display: block;
+}
+
+.agency-rating-title {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.agency-rating-reviews {
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.agency-rating-show-more-btn {
+    position: absolute;
+    font-weight: 300;
+    cursor: pointer;
+    bottom: 10px;
+    color: blue;
+}
+
+@media screen and (max-width: 700px) {
+    .example-sidenav {
+        width: 100%;
+      }
+
+    .agency-title-row {
+        margin: 10px 0px;
+    }
+
+    .agency-name {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .agency-localization {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .agency-add-to-favourite {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .agency-capability-title {
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        width: 100%;
+        text-align: center
+    }
+
+    .agency-capability {
+        margin: 5px 0px;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .agency-rating {
+        position: relative;
+    }
+    
+    .agency-rating-stars {
+        color: gold;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: 0;
+    }
+    
+    .agency-rating-title {
+        font-weight: 500;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .agency-rating-reviews {
+        font-weight: 100;
+        font-size: 0.9rem;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    .agency-rating-show-more-btn {
+        position: unset;
+        display: block;
+        font-weight: 300;
+        cursor: pointer;
+        color: blue;
+        width: 100%;
+        text-align: center;
+    }
+}

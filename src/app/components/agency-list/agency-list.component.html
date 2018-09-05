@@ -1,0 +1,97 @@
+<ng-container >
+  <!-- Header -->
+  <div class="header row">
+    <span class="col">
+      <span class="filters-button" (click)="changeSidebarState()">
+        <i class="material-icons filters-menu-icon">menu</i>
+        Filters
+        <i class="material-icons filters-hide-icon">{{opened ? 'chevron_left' : 'chevron_right'}}</i>
+      </span>
+    </span>
+    <span class="col-6">
+      Displaying 315 results for: Photography
+    </span>
+    <span class="col-3 text-right">
+      Sort by: Highest grades
+    </span>
+  </div>
+
+<mat-sidenav-container class="example-container">
+
+  <!-- Sidebar -->
+
+    <mat-sidenav #sidenav 
+                 mode="side" 
+                 [(opened)]="opened" 
+                 class="example-sidenav" 
+                 (opened)="events.push('open!')"
+                 (closed)="events.push('close!')" 
+                 [fixedInViewport]="false" 
+                 [fixedTopGap]="10" 
+                 [fixedBottomGap]="10">
+      <div>
+        <div class="filters-category">
+          Category:
+          <i class="material-icons" (click)="toggle()">keyboard_arrow_up</i>
+          <ul #listaDoZwiniecia style="overflow: hidden;">
+            <li *ngFor='let category of categoryList'><mat-checkbox (click)='onCategoryChange(category)'>{{category.name}}</mat-checkbox></li>
+            <li class="show-more-button">Show more</li>
+          </ul>
+        </div>
+        <div class="">
+          Capabilities:
+        </div>
+        <div class="">
+          Rating:
+        </div>
+        <div class="">
+          Contract type:
+        </div>
+      </div>
+    </mat-sidenav>
+  
+    <!-- Content -->
+
+    <mat-sidenav-content style="min-height: 800px;">
+      <div class="row content" *ngFor='let agency of getFilteredList()'>
+        <div class="col-md-2 agency-logo-container">
+          <img [src]='agency.logoUrl' alt="logo" class="img-fluid agency-logo" />
+        </div>
+        <div class="col-md-8" >
+          <div class="agency-title-row">
+            <div>
+              <h5 class="agency-name">{{agency.name}}</h5>
+              <span class="agency-localization">
+                <i class="material-icons">place</i>{{agency.localization}}
+              </span>
+              <span class="agency-add-to-favourite">
+                  <i class="material-icons">favorite_border</i>Add to favourite
+              </span>
+            </div>
+          </div>
+          <div class="agency-content">
+              {{agency.description}}
+          </div>
+          <div class="agency-capabilities-container">
+            <span class="agency-capability-title">Top capabilities:</span>
+            <span class="agency-capability" style="background-color: red">Photography</span>
+            <span class="agency-capability" style="background-color: green">Animations</span> 
+            <span class="agency-capability" style="background-color: blue">Movies</span></div>
+        </div>
+        <div class="col-md-2 agency-rating">
+          <div class="agency-rating-stars">
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+          </div>
+          <div class="agency-rating-title">Perfect</div>
+          <div class="agency-rating-reviews">{{agency.reviews}} reviews</div>
+          <div class="agency-rating-show-more-btn">SHOW MORE</div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+</ng-container>
