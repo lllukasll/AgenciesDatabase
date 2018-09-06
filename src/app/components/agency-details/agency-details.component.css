@@ -1,0 +1,16 @@
+.content {
+    background-color: white;
+    margin: 10px 20px;
+    padding: 20px;
+}
+
+.header {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.back-icon {
+    font-size: 2rem;
+    color: #0066cc;
+}

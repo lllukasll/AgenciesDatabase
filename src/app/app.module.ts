@@ -10,6 +10,10 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { AgencyListComponent } from './components/agency-list/agency-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarComponent } from './components/common/star/star.component';
+import { AgencyDetailsComponent } from './components/agency-details/agency-details.component';
+import { AgencyInformationsComponent } from './components/agency-details/agency-informations/agency-informations.component';
+import { AgencyProjectsComponent } from './components/agency-details/agency-projects/agency-projects.component';
+import { AgencyRatingComponent } from './components/agency-details/agency-rating/agency-rating.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { StarComponent } from './components/common/star/star.component';
     NavbarComponent,
     MainPageComponent,
     AgencyListComponent,
-    StarComponent
+    StarComponent,
+    AgencyDetailsComponent,
+    AgencyInformationsComponent,
+    AgencyProjectsComponent,
+    AgencyRatingComponent,
   ],
   imports: [
     BrowserModule,

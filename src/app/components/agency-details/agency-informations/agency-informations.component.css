@@ -1,0 +1,57 @@
+.agency-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agency-title-row {
+    margin-bottom: 10px;
+}
+
+.agency-name {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+.agency-localization {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.agency-add-to-favourite {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center
+}
+
+.content { 
+    position: relative;
+}
+
+.contact-text {
+    font-weight: 1000;
+}
+
+.agency-capabilities-container {
+    position: absolute;
+    bottom: 5px;
+}
+
+.agency-capability { 
+    background-color: #0066cc;
+    padding: 2px 8px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.localization-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.localization {
+    margin-left: 10px;
+}

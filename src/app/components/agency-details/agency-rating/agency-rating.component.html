@@ -1,0 +1,108 @@
+<div class="row header">
+  <div class="col-md-6 text-left header-reviews-count">
+    {{agency.reviews}} reviews
+  </div>
+  <div class="col-md-6 text-right">
+    <button class="add-feedback-btn">ADD FEEDBACK</button>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-6">
+    <span style="font-size: 1rem">Select a row below to filter reviews</span>
+
+    <div class="rating-list-element" style="width: 100%" >
+      <span class="star-value">5</span>
+      <i class="material-icons">star</i> 
+      <div class="progress-bar-container">
+        <div class="progress-bar-value">
+        </div>
+      </div> 
+      <span class="star-value">138</span>
+    </div>
+
+    <div class="rating-list-element" style="width: 100%" >
+      <span class="star-value">4</span>
+      <i class="material-icons">star</i> 
+      <div class="progress-bar-container">
+        <div class="progress-bar-value">
+        </div>
+      </div> 
+      <span class="star-value">12</span>
+    </div>
+
+    <div class="rating-list-element" style="width: 100%" >
+      <span class="star-value">3</span>
+      <i class="material-icons">star</i> 
+      <div class="progress-bar-container">
+        <div class="progress-bar-value">
+        </div>
+      </div> 
+      <span class="star-value">1</span>
+    </div>
+
+    <div class="rating-list-element" style="width: 100%" >
+      <span class="star-value">2</span>
+      <i class="material-icons">star</i> 
+      <div class="progress-bar-container">
+        <div class="progress-bar-value">
+        </div>
+      </div> 
+      <span class="star-value">1</span>
+    </div>
+
+    <div class="rating-list-element" style="width: 100%" >
+      <span class="star-value">1</span>
+      <i class="material-icons">star</i> 
+      <div class="progress-bar-container">
+        <div class="progress-bar-value">
+        </div>
+      </div> 
+      <span class="star-value">1</span>
+    </div>
+
+  </div>
+  <div class="col-md-6" style="margin-top: 20px;">
+    <div class="rating-overall-element"> Overall <app-star [rating]='5'></app-star> </div> 
+    <div class="rating-overall-element"> Time delivery <app-star [rating]='5'></app-star> </div> 
+    <div class="rating-overall-element"> Cost estimation <app-star [rating]='5'></app-star> </div> 
+    <div class="rating-overall-element"> Quality <app-star [rating]='5'></app-star> </div> 
+    <div class="rating-overall-element"> Support and interaction <app-star [rating]='5'></app-star> </div> 
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-12 text-left review-user-container">
+    <div class="review-user-icon">
+      <img src="../../../../assets/img/userIcon.png" alt="user" />
+    </div>
+    <div style="display: inline-block;margin-left: 10px;">
+      <span><b>Tim McDean</b></span>
+      <span class="review-user-date">May 2018</span>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    Time delivery :  <app-star [rating]='5' class="review-rating-star"></app-star>
+  </div>
+  <div class="col-md-3">
+    Cost estimation : <app-star [rating]='5' class="review-rating-star"></app-star>
+  </div>
+  <div class="col-md-3">
+    Quality : <app-star [rating]='5' class="review-rating-star"></app-star>
+  </div>
+  <div class="col-md-3">
+    Support and interaction : <app-star [rating]='5' class="review-rating-star"></app-star>
+  </div>
+
+  <div class="col-md-12"> 
+    <div class="review-project-title">ABC Project</div>
+    <div class="review-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac leo sit amet metus aliquet ullamcorper. Suspendisse quis lorem felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus facilisis ornare eros nec tincidunt. In vel tortor ut orci pulvinar consectetur eget sit amet urna. Mauris semper arcu a nisi condimentum, id egestas massa posuere. Proin a massa sed ex consectetur tristique </div>
+    <div class="review-reply-button text-right">REPLY</div>
+  </div>
+
+</div>
